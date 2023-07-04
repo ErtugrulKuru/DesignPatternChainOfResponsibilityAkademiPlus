@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<div class="container">
+    <br />
+    <button class="btn btn-warning" id="btn1">Button1</button>
+    <button class="btn btn-dark" id="btn2">Button2</button>
+    <button class="btn btn-primary" id="btn3">Button3</button>
+    <button class="btn btn-primary" id="btn4">Button4</button>
+    <button class="btn btn-primary" id="btn5">Button5</button>
+    <button class="btn btn-primary" id="btn6">Button6</button>
+</div>
+
+<script>
+    $("#btn1").click(function()
+    {
+        alert('Test1');
+    })
+
+    $("#btn2").click(function()
+    {
+        swal('Test2');
+    })
+
+    $("#btn3").click(function()
+    {
+        swal('Test3','Test3');
+    })
+
+    $("#btn4").click(function () {
+        swal('Test4', 'Test4','success');
+    })
+
+    $("#btn5").click(function()
+    {
+        swal('Test5','Test5',{
+        buttons: ['Eyvah!', 'Okey!'],
+    })})
+
+    $("#btn6").click(function()
+    {
+        swal('Test6',{content: 'input',})
+        .then((value) =>{
+            swal(':) ${value}');
+        });
+    })
+</script>
